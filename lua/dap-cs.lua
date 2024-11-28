@@ -84,6 +84,7 @@ local select_dll = function(project_path)
   local project_name = vim.fn.fnamemodify(project_file, ":t:r")
 
   local dll_path = net_bin .. '/' .. project_name .. '.dll'
+  echo dll_path
   return dll_path
 end
 
