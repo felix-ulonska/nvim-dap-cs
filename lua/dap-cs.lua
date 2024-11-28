@@ -21,13 +21,14 @@ local number_indices = function(array)
 end
 
 local display_options = function(prompt_title, options)
+  orig_options = options
   options = number_indices(options)
   table.insert(options, 1, prompt_title)
 
   local choice = vim.fn.inputlist(options)
 
   if choice > 0 then
-    return options[choice + 1]
+    return orig_options[choice + 1]
   else
     return nil
   end
