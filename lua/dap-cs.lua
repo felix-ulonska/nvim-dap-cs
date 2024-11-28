@@ -28,7 +28,7 @@ local display_options = function(prompt_title, options)
   local choice = vim.fn.inputlist(options)
 
   if choice > 0 then
-    return orig_options[choice + 1]
+    return orig_options[choice]
   else
     return nil
   end
